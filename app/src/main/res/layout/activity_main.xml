@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="app:layout_constraintStart_toStartOf=&quot;@+id/guideline&quot;"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:text="이름"
+        style="@style/Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:text="정소희"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/birthdateTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생년월일"
+        app:layout_constraintStart_toStartOf="@+id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/birthdateValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0000-00-00"
+        app:layout_constraintBaseline_toBaselineOf="@+id/birthdateTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"/>
+
+    <TextView
+        android:id="@+id/bloodtypeTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="혈액형"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="@+id/birthdateTextView"
+        app:layout_constraintTop_toBottomOf="@+id/birthdateTextView" />
+
+    <TextView
+        android:id="@+id/bloodtypeValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bloodtypeTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/emergencynumberTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비상 연락처"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="@+id/bloodtypeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/bloodtypeTextView" />
+
+    <TextView
+        android:id="@+id/emergencynumberValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="0000-0000-0000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/emergencynumberTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/cautionTextView"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="주의사항"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="@+id/emergencynumberTextView"
+        app:layout_constraintTop_toBottomOf="@+id/emergencynumberTextView"/>
+
+    <TextView
+        android:id="@+id/cautionValueTextView"
+        style="@style/Value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="주의사항"
+        app:layout_constraintBaseline_toBaselineOf="@+id/cautionTextView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        tools:ignore="MissingConstraints"/>
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintGuide_percent="0.4" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/goInputActivityButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_edit_24"
+        android:contentDescription="입력 화면으로 이동"
+        tools:layout_editor_absoluteY="669dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
